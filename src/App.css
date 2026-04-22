@@ -1,0 +1,233 @@
+/* ── Layout ─────────────────────────────────────── */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── Header ─────────────────────────────────────── */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  color: var(--text-strong);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.header-nav a {
+  font-size: 14px;
+  color: var(--text);
+  transition: color 0.15s;
+}
+
+.header-nav a:hover {
+  color: var(--text-strong);
+}
+
+/* ── Main ────────────────────────────────────────── */
+.main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+/* ── Hero ────────────────────────────────────────── */
+.hero {
+  margin-bottom: 48px;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* ── Grid ────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* ── Card ────────────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.card:hover {
+  border-color: #3a3b48;
+  transform: translateY(-2px);
+}
+
+.card-accent {
+  height: 4px;
+  flex-shrink: 0;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.badge-lock {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  white-space: nowrap;
+}
+
+.card-description {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+/* ── Tags ────────────────────────────────────────── */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 7px;
+  letter-spacing: 0.02em;
+}
+
+/* ── Buttons ─────────────────────────────────────── */
+.card-links {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-primary {
+  background: var(--text-strong);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  color: var(--text-strong);
+  border-color: #4a4b58;
+}
+
+.btn-disabled {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ── Footer ──────────────────────────────────────── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.footer a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer a:hover {
+  color: var(--text);
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 640px) {
+  .main {
+    padding: 32px 16px 48px;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

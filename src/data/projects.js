@@ -47,7 +47,7 @@ export const projects = [
     id: "claude-usage",
     name: "claude-usage",
     description:
-      "Tracks Claude Code token usage and cost estimates by model and date. Reads local session logs — run the command below to start the dashboard.",
+      "Tracks Claude Code token usage and cost by model and date. Run the command below from H:\\Other\\Claude Projects\\claude-usage to start the dashboard.",
     command: "python cli.py dashboard",
     tags: ["Python", "CLI"],
     liveUrl: "http://localhost:8080",

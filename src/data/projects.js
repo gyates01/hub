@@ -47,9 +47,10 @@ export const projects = [
     id: "claude-usage",
     name: "claude-usage",
     description:
-      "CLI tool for tracking Anthropic API usage and costs. Queries local Claude Code session logs and outputs cost summaries by model and date.",
+      "Tracks Claude Code token usage and cost estimates by model and date. Reads local session logs — run the command below to start the dashboard.",
+    command: "python cli.py dashboard",
     tags: ["Python", "CLI"],
-    liveUrl: null,
+    liveUrl: "http://localhost:8080",
     githubUrl: "https://github.com/gyates01/claude-usage",
     protected: false,
     accent: "#e879f9",

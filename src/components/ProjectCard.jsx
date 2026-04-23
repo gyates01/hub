@@ -1,5 +1,5 @@
 export default function ProjectCard({ project }) {
-  const { name, description, tags, liveUrl, githubUrl, protected: isProtected, accent } = project;
+  const { name, description, command, tags, liveUrl, githubUrl, protected: isProtected, accent } = project;
 
   return (
     <div className="card">
@@ -10,6 +10,11 @@ export default function ProjectCard({ project }) {
           {isProtected && <span className="badge-lock">🔒 Private</span>}
         </div>
         <p className="card-description">{description}</p>
+        {command && (
+          <div className="card-command">
+            <code>{command}</code>
+          </div>
+        )}
         <div className="card-tags">
           {tags.map((tag) => (
             <span key={tag} className="tag">{tag}</span>

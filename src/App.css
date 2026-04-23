@@ -134,6 +134,21 @@
   margin-bottom: 16px;
 }
 
+/* ── Command ─────────────────────────────────────── */
+.card-command {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+}
+
+.card-command code {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 13px;
+  color: var(--text-strong);
+}
+
 /* ── Tags ────────────────────────────────────────── */
 .card-tags {
   display: flex;

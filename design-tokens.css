@@ -1,0 +1,151 @@
+/**
+ * Project Hub — Design Tokens
+ *
+ * Copy this file into any new project as your CSS variable starting point.
+ * See BRAND.md for usage guidance and per-project notes.
+ *
+ * USAGE:
+ *   @import './design-tokens.css';   (or paste into index.css)
+ *
+ * Then override what you need in your project's index.css.
+ */
+
+:root {
+
+  /* ── Base — Warm Graphite ──────────────────────────────────────────────
+     Default dark theme used by Recipe Logger and Finance Tracker.
+     The Hub uses slightly different values (see override block below).
+  ────────────────────────────────────────────────────────────────────── */
+  --bg:       #111216;   /* page background */
+  --card:     #1a1c22;   /* primary card / surface */
+  --card2:    #20222a;   /* secondary card, nested surfaces */
+  --border:   #272931;   /* primary borders */
+  --border2:  #363940;   /* secondary borders, dividers */
+  --sidebar:  #0e0f13;   /* sidebar / deepest surface */
+
+  /* aliases — use whichever naming convention the project already uses */
+  --surface:  #1a1c22;
+  --surface-2: #20222a;
+
+  /* ── Text ──────────────────────────────────────────────────────────────
+     Five levels of text hierarchy — don't improvise new values.
+  ────────────────────────────────────────────────────────────────────── */
+  --text:         #f2f2f5;   /* primary text */
+  --text-strong:  #f3f4f6;   /* bright — headings, key values */
+  --muted:        #9da0b8;   /* secondary — labels, metadata */
+  --text-dim:     #9da0b8;   /* alias for --muted */
+  --dim:          #7a7e96;   /* tertiary — placeholders, captions */
+  --faint:        #55586e;   /* near-invisible — disabled, decorative */
+  --text-muted:   #6b7280;   /* hub alias (slightly different shade) */
+
+  /* ── Accent — Purple Identity ──────────────────────────────────────────
+     Primary accent across all dark-theme projects.
+     Override if a project has its own identity color.
+  ────────────────────────────────────────────────────────────────────── */
+  --accent:        #7c6af7;   /* primary purple — buttons, focus, active */
+  --accent-light:  #a78bfa;   /* lighter purple — hover tints */
+
+  /* ── Category Accents ──────────────────────────────────────────────────
+     6-color categorical palette from Recipe Logger.
+     Reusable for any multi-series data that needs distinct colors.
+  ────────────────────────────────────────────────────────────────────── */
+  --accent-breakfast:  #f59e0b;   /* amber */
+  --accent-lunch:      #22c55e;   /* green */
+  --accent-dinner:     #7c6af7;   /* purple (same as --accent) */
+  --accent-dessert:    #f43f5e;   /* rose */
+  --accent-snack:      #0ea5e9;   /* sky blue */
+  --accent-side:       #f97316;   /* orange */
+  --accent-default:    #7a7e96;   /* gray fallback */
+
+  /* ── Semantic Colors ───────────────────────────────────────────────────
+     Use these for state-driven UI (success messages, errors, warnings).
+     Don't use raw hex — keep semantic meaning attached to the token.
+  ────────────────────────────────────────────────────────────────────── */
+  --success:  #22c55e;   /* positive values, completed states */
+  --danger:   #ef4444;   /* errors, destructive actions */
+  --warning:  #eab308;   /* warnings */
+  --amber:    #f59e0b;   /* caution, TBD, pending */
+  --indigo:   #6366f1;   /* chart highlight, secondary data series */
+  --blue:     #3b82f6;   /* links, secondary accent */
+  /* aliases */
+  --green:    #22c55e;
+  --red:      #ef4444;
+  --yellow:   #eab308;
+
+  /* ── Cuisine / Sequential Palette ─────────────────────────────────────
+     5-color cycling palette for unlabeled sequential data (charts, lists).
+     Use --cuisine-1 first, then cycle through.
+  ────────────────────────────────────────────────────────────────────── */
+  --cuisine-1: #f59e0b;   /* amber */
+  --cuisine-2: #22c55e;   /* green */
+  --cuisine-3: #0ea5e9;   /* sky */
+  --cuisine-4: #f43f5e;   /* rose */
+  --cuisine-5: #a78bfa;   /* lavender */
+
+  /* ── Layout ────────────────────────────────────────────────────────────
+     Standard structural measurements shared across projects.
+  ────────────────────────────────────────────────────────────────────── */
+  --nav-height-top:     56px;    /* top navigation bar */
+  --nav-height-bottom:  64px;    /* mobile bottom tab bar */
+  --max-width-content:  900px;   /* single-column content */
+  --max-width-wide:     1600px;  /* full dashboard / hub */
+  --breakpoint-mobile:  768px;   /* mobile ↔ desktop */
+
+  /* ── Border Radius ─────────────────────────────────────────────────────
+     xs: dense inputs/tags  |  sm: buttons/badges  |
+     md: form fields        |  lg: cards/panels
+  ────────────────────────────────────────────────────────────────────── */
+  --radius-xs:  4px;
+  --radius-sm:  6px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+
+  /* ── Motion ────────────────────────────────────────────────────────────
+     Keep transitions short. No custom easing needed at these durations.
+  ────────────────────────────────────────────────────────────────────── */
+  --transition-fast:  0.15s;   /* opacity, color, transform */
+  --transition-base:  0.2s;    /* border-color, background */
+
+}
+
+
+/* ── Hub Override ────────────────────────────────────────────────────────
+   The hub uses a slightly lighter base than the Warm Graphite projects.
+   Apply this block in the hub project, overriding the defaults above.
+
+:root {
+  --bg:        #0d0d0f;
+  --surface:   #16171d;
+  --surface-2: #1e1f28;
+  --border:    #2a2b35;
+  --text:      #9ca3af;
+  --text-strong: #f3f4f6;
+  --text-muted:  #6b7280;
+}
+──────────────────────────────────────────────────────────────────────── */
+
+
+/* ── Global Resets (optional — paste into body / * rules) ───────────────
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--card); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border2); }
+
+──────────────────────────────────────────────────────────────────────── */

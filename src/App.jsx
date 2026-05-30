@@ -23,8 +23,8 @@ export default function App() {
         </section>
 
         <section className="grid">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          {projects.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </section>
       </main>

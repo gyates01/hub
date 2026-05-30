@@ -44,6 +44,29 @@ export const projects = [
     accent: "#38bdf8",
   },
   {
+    id: "chicago-trip",
+    name: "Chicago Trip 2026",
+    description:
+      "Interactive trip guide for a Chicago visit. Embedded map with pin markers, itinerary, restaurant picks, bars, and activities organized by neighborhood.",
+    tags: ["HTML", "CSS", "JavaScript", "Leaflet"],
+    liveUrl: "https://chicago-trip-nine.vercel.app",
+    githubUrl: "https://github.com/gyates01/chicago-trip",
+    protected: false,
+    accent: "#fbbf24",
+  },
+  {
+    id: "swing-lab",
+    name: "Swing Lab",
+    description:
+      "Swing trading research tool. Gate-checks macro conditions, scans for momentum picks, runs walk-forward backtests, and generates AI-powered trade reviews and postmortems.",
+    command: "uv run swing-lab rebalance",
+    tags: ["Python", "uv", "Claude API", "SQLite"],
+    liveUrl: null,
+    githubUrl: null,
+    protected: false,
+    accent: "#34d399",
+  },
+  {
     id: "claude-usage",
     name: "claude-usage",
     description:

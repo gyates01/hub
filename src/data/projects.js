@@ -58,10 +58,10 @@ export const projects = [
     id: "swing-lab",
     name: "Swing Lab",
     description:
-      "Swing trading research tool. Gate-checks macro conditions, scans for momentum picks, runs walk-forward backtests, and generates AI-powered trade reviews and postmortems.",
-    command: "uv run swing-lab rebalance",
+      "Swing trading research tool. Gate-checks macro conditions, scans for momentum picks, runs walk-forward backtests, and generates AI-powered trade reviews and postmortems. Run the command below to launch the Streamlit dashboard.",
+    command: "uv run swing-lab dashboard",
     tags: ["Python", "uv", "Claude API", "SQLite"],
-    liveUrl: null,
+    liveUrl: "http://localhost:8501",
     githubUrl: null,
     protected: false,
     accent: "#34d399",

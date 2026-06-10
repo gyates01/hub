@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>
+  /* og:image template — 1200×630 dark card
+     Usage: update the text vars below, open in browser, screenshot at 1200×630.
+     Design follows BRAND.md — Warm Graphite base, Purple identity.
+  */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px;
+    background: #0d0d0f;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 64px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* ── EDIT THESE FOR EACH PROJECT ── */
+  .project-name { content: "PROJECT NAME"; }
+  .project-tagline { content: "Short description of the project."; }
+  .project-url { content: "project.vercel.app"; }
+  .accent-color { color: #7c6af7; } /* Purple default — override per project */
+
+  /* ── Layout ── */
+  .title {
+    font-size: 56px; font-weight: 700; letter-spacing: -0.02em;
+    color: #f3f4f6; line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .accent-bar {
+    width: 64px; height: 4px; border-radius: 2px;
+    margin-bottom: 24px;
+  }
+  .tagline {
+    font-size: 22px; font-weight: 400;
+    color: #9ca3af; line-height: 1.4;
+    max-width: 720px;
+  }
+  .footer {
+    position: absolute; bottom: 32px; right: 72px;
+    font-family: ui-monospace, 'Consolas', monospace;
+    font-size: 14px; color: #6b7280;
+  }
+
+  /* Subtle decorative element */
+  .deco {
+    position: absolute; top: -120px; right: -80px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    opacity: 0.03; pointer-events: none;
+  }
+</style>
+</head>
+<body>
+  <div class="deco" style="background: var(--accent, #7c6af7)"></div>
+  <div class="title">GARRETT YATES<br/>— PROJECT NAME</div>
+  <div class="accent-bar" style="background: var(--accent, #7c6af7)"></div>
+  <div class="tagline">Short description of the project. What it does, what stack it uses.</div>
+  <div class="footer">project.vercel.app</div>
+</body>
+</html>

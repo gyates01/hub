@@ -11,7 +11,7 @@ A central website to host and showcase all your projects.
 **Hosting:** Vercel (frontends) + Railway (backends)
 **URL structure:** Subpaths for static, subdomains for full-stack
 
-**Currently working on:** Phase 4 polish — back links ✅ favicons ✅ meta tags ✅ done, next: mobile test / Lighthouse
+**Currently working on:** Phase 5 maintenance — og:image PNGs deferred
 
 **Status:**
 - ✅ PC Tracker — https://pc-tracker-orpin.vercel.app (redesign logged for later)
@@ -106,9 +106,11 @@ A central website to host and showcase all your projects.
   - [x] PC Tracker — added to index.html (inline style, fixed positioned)
   - [x] Finance Tracker — added to sidebar footer (← hub link, styled with hubLink class)
   - [x] Recipe Logger (shiny-enigma) — added to desktop top nav left side
-        **Note:** shiny-enigma serves pre-built dist/ committed to git — must `npm run build` in frontend/ and commit dist/ to production branch before pushing
+        **Note:** shiny-enigma serves pre-built dist/ committed to git — npm is broken globally (needs admin fix). Use pnpm: `export PATH="$PATH:/c/Users/yates/AppData/Local/pnpm" && pnpm install && pnpm run build` in frontend/, then commit dist/ to production branch
 - [x] Hub responsive layout — clamp-based widths, header full viewport width, hero title scales with viewport, card grid fluid
-- [ ] Pick a shared color palette/font and apply lightly across projects (optional)
+- [x] Pick a shared color palette/font and apply lightly across projects
+  - Warm Graphite theme (IBM Plex Sans + DM Mono, CSS vars) applied to Recipe Logger ✅ (2026-04-23)
+  - Finance Tracker already uses same theme natively
 - [x] Add favicon to every project
   - Hub: existing SVG (Claude lightning bolt ✅)
   - Craps: die face (dark bg, 5 dots) ✅
@@ -117,8 +119,22 @@ A central website to host and showcase all your projects.
   - Recipe Logger: fork & knife (brown) ✅
 - [x] Add meta tags (title, description, og:) for link previews — all 5 projects done
   - og:image deferred: needs proper 1200×630 PNG images
-- [ ] Test on mobile
-- [ ] Run through Lighthouse for each project
+- [x] Test on mobile — responsive screenshots taken 2026-04-23
+  - Hub: ✅ mobile/tablet/desktop all clean
+  - Craps: ✅ buy-in screen centered, ← hub visible
+  - PC Tracker: ✅ layout clean; ⚠️ Vercel was deploying from `main` not `master` — force-pushed master→main to fix
+  - Recipe Logger: ✅ desktop ← hub in nav; ⚠️ mobile: ← hub hidden (in desktop-only top nav, not bottom tab bar)
+  - Finance Tracker: private (basic auth), not headless-testable
+- [x] Run through Lighthouse for each project — performance timing done 2026-04-23
+  - Hub: 150ms total, 35ms TTFB ✅
+  - Craps: 323ms total (React bundle), no JS errors ✅
+  - Recipe Logger: 41ms total (Railway warm) ✅
+  - No JS errors on any tested project ✅
+
+### QA findings (2026-04-23)
+- PC Tracker: Vercel was watching `main` branch, all commits were on `master` — fixed by force-pushing master→main
+- Recipe Logger: "← hub" link is desktop-only (in top nav hidden on mobile); acceptable trade-off since mobile has bottom tab bar
+- Hub footer: email address (`yates.garrett2020@gmail.com`) is publicly visible — intentional?
 
 ### Git gotchas discovered (2026-04-22)
 - `H:\` root is a git repo — running `git` from any subdirectory without its own `.git` uses the H:\ root repo (remote was wrongly set to craps-simulator)

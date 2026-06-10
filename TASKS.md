@@ -11,7 +11,7 @@ _Phase 4 is complete. These are Phase 5 maintenance items._
 
 - [x] Design a reusable 1200×630 card template (dark theme, project name + description)
 - [x] Generate og:image PNGs for Hub, Craps, PC Tracker, Chicago Trip
-- [x] Add `<meta property="og:image" content="...">` to hub index/head
+- [x] Add `<meta property="og:image" content="...">` to hub, Craps, PC Tracker, Chicago Trip index/head
 
 ## Project Template
 

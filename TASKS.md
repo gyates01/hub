@@ -15,8 +15,8 @@ _Phase 4 is complete. These are Phase 5 maintenance items._
 
 ## Project Template
 
-- [ ] Create a `gyates01/project-template` repo with: Vite + React scaffold, BRAND.md tokens pre-wired, CLAUDE.md template, favicon placeholder, meta tags, hub back link
-- [ ] Document the checklist for adding a new project:
+- [x] Create a `gyates01/project-template` repo with: Vite + React scaffold, BRAND.md tokens pre-wired, CLAUDE.md template, favicon placeholder, meta tags, hub back link
+- [x] Document the checklist for adding a new project:
   1. Build it
   2. Deploy it (Vercel or Railway)
   3. Source a card screenshot or og:image

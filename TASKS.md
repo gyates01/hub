@@ -27,4 +27,4 @@ _Phase 4 is complete. These are Phase 5 maintenance items._
 ## Maintenance
 
 - [x] Establish a review cadence — quarterly cron job checks all project URLs
-- [ ] Confirm `H:\Other\Claude Projects` root git repo remote (`gyates01/pc-tracker` leftover) is never accidentally pushed
+- [x] Confirm `H:\Other\Claude Projects` root git repo remote (`gyates01/pc-tracker` leftover) is never accidentally pushed — no root .git exists, all project remotes correct

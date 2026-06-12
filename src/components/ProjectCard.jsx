@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function getStatus({ liveUrl, protected: isProtected }) {
   if (liveUrl && liveUrl.includes("localhost")) return { label: "Local", modifier: "status-local" };
   if (isProtected) return { label: "Private", modifier: "status-private" };
@@ -8,11 +10,22 @@ function getStatus({ liveUrl, protected: isProtected }) {
 export default function ProjectCard({ project, index = 0 }) {
   const { name, description, command, tags, liveUrl, githubUrl, accent } = project;
   const status = getStatus(project);
+  const [copied, setCopied] = useState(false);
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     e.currentTarget.style.setProperty("--mx", `${e.clientX - rect.left}px`);
     e.currentTarget.style.setProperty("--my", `${e.clientY - rect.top}px`);
+  };
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(command);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      /* clipboard unavailable — ignore */
+    }
   };
 
   return (
@@ -36,6 +49,14 @@ export default function ProjectCard({ project, index = 0 }) {
         {command && (
           <div className="card-command">
             <code>{command}</code>
+            <button
+              type="button"
+              className={`copy-btn${copied ? " copied" : ""}`}
+              onClick={handleCopy}
+              aria-label={`Copy command: ${command}`}
+            >
+              {copied ? "Copied ✓" : "Copy"}
+            </button>
           </div>
         )}
         <div className="card-tags">

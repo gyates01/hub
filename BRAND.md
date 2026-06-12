@@ -288,6 +288,7 @@ Good for list items that have a binary on/off state (purchased, completed, activ
 - Max-width 1600px, header spans full viewport
 - **Spotlight card pattern (v1.4):** cards expose project accent as `--card-accent`; a `::before` radial gradient follows the cursor (`--mx`/`--my` set via `onMouseMove`), tinted `color-mix(in srgb, var(--card-accent) 10%, transparent)`. Hover border mixes accent 40% into `--border`. All disabled under `prefers-reduced-motion`.
 - **Status pills (v1.4):** Live (green, pulsing dot) / Local (amber) / Private (lavender) — derived from `liveUrl`/`protected`, replaces 🔒 emoji badge
+- **Copy button (v1.4.1):** small secondary button inside command blocks; `navigator.clipboard`, 1.5s "Copied ✓" state in `--green`
 
 ### Recipe Logger (`shiny-enigma-production-ee0c.up.railway.app`)
 - Warm Graphite (`#111216`) — deepest/warmest dark

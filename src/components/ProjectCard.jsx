@@ -1,13 +1,36 @@
+function getStatus({ liveUrl, protected: isProtected }) {
+  if (liveUrl && liveUrl.includes("localhost")) return { label: "Local", modifier: "status-local" };
+  if (isProtected) return { label: "Private", modifier: "status-private" };
+  if (liveUrl) return { label: "Live", modifier: "status-live" };
+  return null;
+}
+
 export default function ProjectCard({ project, index = 0 }) {
-  const { name, description, command, tags, liveUrl, githubUrl, protected: isProtected, accent } = project;
+  const { name, description, command, tags, liveUrl, githubUrl, accent } = project;
+  const status = getStatus(project);
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    e.currentTarget.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+    e.currentTarget.style.setProperty("--my", `${e.clientY - rect.top}px`);
+  };
 
   return (
-    <div className="card" style={{ animationDelay: `${index * 0.07}s` }}>
-      <div className="card-accent" style={{ background: accent }} />
+    <div
+      className="card"
+      style={{ animationDelay: `${index * 0.07}s`, "--card-accent": accent }}
+      onMouseMove={handleMouseMove}
+    >
+      <div className="card-accent" />
       <div className="card-body">
         <div className="card-header">
           <h2 className="card-title">{name}</h2>
-          {isProtected && <span className="badge-lock"><span aria-hidden="true">🔒</span> Private</span>}
+          {status && (
+            <span className={`status ${status.modifier}`}>
+              <span className="status-dot" aria-hidden="true" />
+              {status.label}
+            </span>
+          )}
         </div>
         <p className="card-description">{description}</p>
         {command && (

@@ -14,3 +14,4 @@ Types: `functional` (features/logic), `visual` (UI/CSS), `content` (cards/links)
 | 2026-04-23 | v1.3 | visual | Warm Graphite theme applied to Recipe Logger (IBM Plex Sans + CSS custom properties) |
 | 2026-04-23 | v1.3.1 | functional | PC Tracker branch fix: force-pushed master→main; Vercel now deploying correctly |
 | 2026-05-29 | — | — | Structured per /new-project: CLAUDE.md, PROJECT.md, PLANNING.md, CHANGELOG.md, TASKS.md added |
+| 2026-06-12 | v1.4 | visual | Flare refresh: cursor-following spotlight on cards (tinted per-project accent), accent-aware hover borders, hero gradient shimmer + ambient glow, status pills (Live/Local/Private) replace lock emoji |

@@ -463,10 +463,10 @@ git -C "H:/Other/Claude Projects/hub" commit -m "docs: Cursor integration Day 0 
 
 | # | Milestone | Status |
 |---|---|---|
-| 1 | Usage baseline recorded | ⏳ Pending |
-| 2 | settings.json cleanup + cbm removed | ⏳ Pending |
-| 3 | Constitution + model-routing updated | ⏳ Pending |
-| 4 | Cursor User Rules created + pasted | ⏳ Pending |
-| 5 | project-template dual-tool | ⏳ Pending |
-| 6 | Verified + documented (Day 0) | ⏳ Pending |
+| 1 | Usage baseline recorded | ✅ 2026-09-25 |
+| 2 | settings.json cleanup + cbm removed | ✅ 2026-09-25 |
+| 3 | Constitution + model-routing updated | ✅ 2026-09-25 |
+| 4 | Cursor User Rules created + pasted | 🔶 2026-09-25 (created; paste into Cursor is a pending user action) |
+| 5 | project-template dual-tool | ✅ 2026-09-25 |
+| 6 | Verified + documented (Day 0) | 🔶 2026-09-25 (docs done; fresh-session + Cursor verification pending user) |
 | — | Trial review (~2026-10-16) | ⏳ Pending |

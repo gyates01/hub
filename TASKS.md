@@ -31,15 +31,16 @@ _Phase 4 is complete. These are Phase 5 maintenance items._
 
 ## Cursor Integration + Claude Usage Cleanup
 
-_Spec: `docs/specs/2026-09-25-cursor-integration-design.md` (committed a083a7c, awaiting user review)_
+_Spec: `docs/specs/2026-09-25-cursor-integration-design.md` (approved). Plan: `PLAN.md`._
 
 - [x] Brainstorm + design approved in chat (2026-09-25) — Approach A: Cursor as cockpit + Claude-side cleanup
 - [x] Write design spec
-- [ ] User reviews written spec
-- [ ] Write implementation plan (`superpowers:writing-plans`) → copy to `PLAN.md`
-- [ ] Record usage.db baseline (last ~2 wks) into `cursor-trial-log.md` BEFORE any settings change
-- [ ] Apply 6 Claude-side cleanup changes (settings.json backup first; verify cbm MCP location before removing)
-- [ ] Create `cursor-user-rules.md`, paste into Cursor User Rules
-- [ ] Update `project-template` with AGENTS.md + `@AGENTS.md` CLAUDE.md
-- [ ] Update `model-routing.md` + CHANGELOG
+- [x] User reviews written spec (approved 2026-09-25)
+- [x] Write implementation plan (`superpowers:writing-plans`) → copy to `PLAN.md`
+- [x] Record usage.db baseline (last ~2 wks) into `cursor-trial-log.md` BEFORE any settings change (2026-09-25)
+- [x] Apply 6 Claude-side cleanup changes (settings.json backup first; verify cbm MCP location before removing) (2026-09-25)
+- [x] Create `cursor-user-rules.md` (2026-09-25) — [ ] paste into Cursor User Rules (user action, pending)
+- [x] Update `project-template` with AGENTS.md + `@AGENTS.md` CLAUDE.md (2026-09-25)
+- [x] Update `model-routing.md` + CHANGELOG (2026-09-25)
+- [ ] Verify fresh Claude session + Cursor integration (Day 0 verification, pending)
 - [ ] Trial review ~2026-10-16 → Cursor Pro decision

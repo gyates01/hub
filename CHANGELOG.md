@@ -16,3 +16,4 @@ Types: `functional` (features/logic), `visual` (UI/CSS), `content` (cards/links)
 | 2026-05-29 | — | — | Structured per /new-project: CLAUDE.md, PROJECT.md, PLANNING.md, CHANGELOG.md, TASKS.md added |
 | 2026-06-12 | v1.4 | visual | Flare refresh: cursor-following spotlight on cards (tinted per-project accent), accent-aware hover borders, hero gradient shimmer + ambient glow, status pills (Live/Local/Private) replace lock emoji |
 | 2026-06-12 | v1.4.1 | interactive | Copy button on command blocks (local projects) — one-click copy of the launch command, with Copied ✓ feedback |
+| 2026-09-25 | — | functional | Cursor integration Day 0: usage baseline + trial log, Claude cleanup (Sonnet default, effort high, cbm removed, learning style off), cursor-user-rules.md, model-routing → Opus 5.5/Sonnet 5, template AGENTS.md. Next: trial review ~2026-10-16 |

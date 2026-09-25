@@ -28,3 +28,18 @@ _Phase 4 is complete. These are Phase 5 maintenance items._
 
 - [x] Establish a review cadence — quarterly cron job checks all project URLs
 - [x] Confirm `H:\Other\Claude Projects` root git repo remote (`gyates01/pc-tracker` leftover) is never accidentally pushed — no root .git exists, all project remotes correct
+
+## Cursor Integration + Claude Usage Cleanup
+
+_Spec: `docs/specs/2026-09-25-cursor-integration-design.md` (committed a083a7c, awaiting user review)_
+
+- [x] Brainstorm + design approved in chat (2026-09-25) — Approach A: Cursor as cockpit + Claude-side cleanup
+- [x] Write design spec
+- [ ] User reviews written spec
+- [ ] Write implementation plan (`superpowers:writing-plans`) → copy to `PLAN.md`
+- [ ] Record usage.db baseline (last ~2 wks) into `cursor-trial-log.md` BEFORE any settings change
+- [ ] Apply 6 Claude-side cleanup changes (settings.json backup first; verify cbm MCP location before removing)
+- [ ] Create `cursor-user-rules.md`, paste into Cursor User Rules
+- [ ] Update `project-template` with AGENTS.md + `@AGENTS.md` CLAUDE.md
+- [ ] Update `model-routing.md` + CHANGELOG
+- [ ] Trial review ~2026-10-16 → Cursor Pro decision

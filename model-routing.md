@@ -1,7 +1,7 @@
 # Model Routing — Task-to-Model Categories
 
 > Definitive tier system for all Claude Code sessions. Match the task to its category, use the assigned model.
-> Reference: `H:\CLAUDE.md` §2 — this file is the expanded taxonomy.
+> Reference: `H:\.claude\CLAUDE.md` §2 — this file is the expanded taxonomy.
 
 ---
 
@@ -11,10 +11,12 @@
 |------|-------|------|-------------|
 | 1 | DeepSeek V4 Flash | $ | Task is mechanical, small, or local |
 | 2 | DeepSeek V4 Pro | $$ | Task needs exploration or moderate reasoning |
-| 3 | Sonnet 4.6 | $$$ | Task produces or reviews code (implementation cap) |
-| 4 | Opus 4.8 | $$$$ | Task requires deep reasoning or cross-project planning |
+| 3 | Sonnet 5 | $$$ | Task produces or reviews code (implementation cap) |
+| 4 | Opus 5.5 | $$$$ | Task requires deep reasoning or cross-project planning |
 
 **Hard rule:** Never use Opus for implementation. Plan with Opus, build with Sonnet.
+
+**Cursor (Free tier, separate budget):** Ctrl+K for tiny edits; Ask for code questions; editor for reviewing Claude's diffs. See `cursor-user-rules.md` and `docs/specs/2026-09-25-cursor-integration-design.md` §2.
 
 ---
 
@@ -90,9 +92,9 @@
 
 ---
 
-## Tier 3 — Sonnet 4.6
+## Tier 3 — Sonnet 5
 
-**Switch:** `/model anthropic/claude-sonnet-4-6`
+**Switch:** `/model sonnet` (`claude-sonnet-5`)
 **Use when the task produces, reviews, or modifies production code. This is the implementation cap.**
 
 ### Category I — Feature Implementation
@@ -145,9 +147,9 @@
 
 ---
 
-## Tier 4 — Opus 4.8
+## Tier 4 — Opus 5.5
 
-**Switch:** `/model anthropic/claude-opus-4-8`
+**Switch:** `/model opus` (`claude-opus-5-5`)
 **Use ONLY for tasks requiring deep reasoning or cross-project synthesis. Never for writing code.**
 
 ### Category O — Complex Reasoning
@@ -202,10 +204,10 @@ Task received
   ├─ Is it exploration/moderate-reasoning? ─► Tier 2: DeepSeek Pro
   │   (search codebase, trace flow, generate docs)
   │
-  ├─ Is it implementation/code/review? ──► Tier 3: Sonnet 4.6
+  ├─ Is it implementation/code/review? ──► Tier 3: Sonnet 5
   │   (write code, review, test, debug, UI)
   │
-  └─ Is it deep-reasoning/planning/research? ─► Tier 4: Opus 4.8
+  └─ Is it deep-reasoning/planning/research? ─► Tier 4: Opus 5.5
       (architecture, research, cross-project)
 ```
 

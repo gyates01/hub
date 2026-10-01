@@ -13,7 +13,7 @@ export PATH="$PATH:/c/Users/yates/AppData/Local/pnpm" && pnpm install && pnpm ru
 ```
 
 ## Deploy
-- Auto-deploy from `main` branch on GitHub push
+- Auto-deploy from `master` branch on GitHub push
 - GitHub: gyates01/hub
 - Live: https://hub-phi-blush.vercel.app
 - Vercel CLI available globally: `vercel` command
@@ -35,5 +35,5 @@ export PATH="$PATH:/c/Users/yates/AppData/Local/pnpm" && pnpm install && pnpm ru
 2. Take a screenshot / source card image
 3. Add card to `src/` with project URL, description, tech stack
 4. Update hub README.md linked projects table
-5. Push to `main` — Vercel auto-deploys
+5. Push to `master` — Vercel auto-deploys
 6. Update BRAND.md Per-Project Notes section if the new project establishes design patterns

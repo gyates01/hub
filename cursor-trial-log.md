@@ -31,7 +31,7 @@ TOTAL                                      1586    8,149,217
 * tokens = input + output + cache_creation (cache reads listed separately)
 ```
 
-Claude usage-cap hits in these 2 weeks (user's recollection): ___
+Claude usage-cap hits in these 2 weeks (user's recollection): 10
 
 ## Trial entries
 

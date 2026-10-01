@@ -40,9 +40,11 @@ _Spec: `docs/specs/2026-09-25-cursor-integration-design.md` (approved). Plan: `P
 - [x] Record usage.db baseline (last ~2 wks) into `cursor-trial-log.md` BEFORE any settings change (2026-09-25)
 - [x] Apply 6 Claude-side cleanup changes (settings.json backup first; verify cbm MCP location before removing) (2026-09-25)
 - [x] Create `cursor-user-rules.md` (2026-09-25)
-- [ ] Paste `cursor-user-rules.md` into Cursor User Rules (user action, pending)
+- [x] Paste `cursor-user-rules.md` into Cursor User Rules (2026-09-25)
 - [x] Update `project-template` with AGENTS.md + `@AGENTS.md` CLAUDE.md (2026-09-25)
 - [x] Update `model-routing.md` + CHANGELOG (2026-09-25)
-- [ ] Verify fresh Claude session + Cursor integration (Day 0 verification, pending)
-- [ ] Fill in `cursor-trial-log.md` cap-hit recollection for the baseline weeks (ground-truth number for the 10-16 Pro decision — spec §5)
+- [x] Verify fresh Claude session shows Sonnet 5 default (2026-09-25)
+- [x] Verify Claude Code extension in Cursor connects + `project-template` agent sees `AGENTS.md` (2026-09-25)
+- [x] Fill in `cursor-trial-log.md` cap-hit recollection for the baseline weeks (2026-09-25) — 10 cap hits in the 2-week baseline
 - [ ] Trial review ~2026-10-16 → Cursor Pro decision
+- [ ] Stop the project-template dev server Cursor left running on port 5173 (started unprompted 2026-09-25)

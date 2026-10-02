@@ -47,4 +47,4 @@ _Spec: `docs/specs/2026-09-25-cursor-integration-design.md` (approved). Plan: `P
 - [x] Verify Claude Code extension in Cursor connects + `project-template` agent sees `AGENTS.md` (2026-09-25)
 - [x] Fill in `cursor-trial-log.md` cap-hit recollection for the baseline weeks (2026-09-25) — 10 cap hits in the 2-week baseline
 - [ ] Trial review ~2026-10-16 → Cursor Pro decision
-- [ ] Stop the project-template dev server Cursor left running on port 5173 (started unprompted 2026-09-25)
+- [x] Stop the project-template dev server Cursor left running on port 5173 (started unprompted 2026-09-25) — confirmed nothing listening 2026-10-01
